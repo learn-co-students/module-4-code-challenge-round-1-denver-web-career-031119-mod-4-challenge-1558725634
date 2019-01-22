@@ -5,28 +5,34 @@ import {transactions} from '../transactionsData'
 
 class AccountContainer extends Component {
 
-  constructor() {
-    super()
+	constructor() {
+		super()
 
-    // get a default state working with the data imported from TransactionsData
-    // use this to get the functionality working
-    // then replace the default transactions with a call to the API
+		// get a default state working with the data imported from TransactionsData
+		// use this to get the functionality working
+		// then replace the default transactions with a call to the API
 
-  }
+	}
 
-  handleChange(event) {
-    // your code here
-  }
+	componentDidMount(){
+		fetch("https://boiling-brook-94902.herokuapp.com/transactions")
+		.then(res => res.json())
+		.then(console.log)
+	}
 
-  render() {
+	handleChange(event) {
+		// your code here
+	}
 
-    return (
-      <div>
-        <Search />
-        <TransactionsList />
-      </div>
-    )
-  }
+	render() {
+
+		return (
+			<div>
+				<Search />
+				<TransactionsList />
+			</div>
+		)
+	}
 }
 
 export default AccountContainer

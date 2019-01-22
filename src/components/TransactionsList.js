@@ -11,12 +11,12 @@ const TransactionsList = () => {
               Posted At
             </h3>
           </th>
-          <th>
+          <th onClick = {() => console.log("REPLACE WITH A FUNCTION TO SORT BY DESCRIPTION")}>
             <h3 className="ui center aligned header">
               Description
             </h3>
           </th>
-          <th>
+          <th onClick = {() => console.log("REPLACE WITH A FUNCTION TO SORT BY CATEGORY")}>
             <h3 className="ui center aligned header">
               Category
             </h3>
